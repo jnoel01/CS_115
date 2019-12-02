@@ -1,0 +1,136 @@
+﻿Jessica Noel
+CS115
+
+
+“I pledge my honor that I have abided by the Stevens Honor Code.”
+
+
+0 xxxx -> S 0 #when all cells are unoccupied go S
+
+
+
+
+0 xxWS -> E 1 #when W/S are occupied go east and toggle state 1
+
+
+
+
+1 xxxx -> S 0 #when south is available go south
+
+
+
+
+0 xEWS -> N 2 #when EWS are occupied go north
+
+
+
+
+2 xxxx -> N 2 #when in state 2 and there are no occupied cells go north
+
+
+
+
+2 NEWx -> S 3 #when in state 2 and NEW are occupied go south and toggle state 3
+
+
+
+
+3 xxxx -> E 1 #when in state 3 and all cells are unoccupied go E and toggle state 1
+
+
+
+
+1 NExx -> S 0 #when NE are occupied but not WS go south and toggle state 0
+
+
+
+
+0 xExS -> N 4 #when ES are blocked go N and toggle state 4
+
+
+
+
+4 xxxx -> E 1 #when E is unoccupied in state 4 and NEWS are open go E
+
+
+
+
+1 xExS -> N 2 #when ES are occupied go N/ toggle state 2
+
+
+
+
+2 NExx -> S 0 #when NE are occupied go S and toggle state 0
+
+
+
+
+1 NExS -> W 5 #when NES are occupied go W and toggle state 5
+
+
+
+
+5 xxxx -> W 5 #when all cells are unoccupied go W (until bot hits wall) and toggle state 5
+
+
+
+
+5 NxWS -> E 6 #when NWS are occupied go E and toggle state 6
+
+
+
+
+6 xxxx -> S 7 #when all cells are unoccupied go S and toggle state 7
+
+
+
+
+7 xxWS -> N 2 #when WS are occupied in state 7 go N and toggle state 2
+
+
+
+
+2 NxWx -> E 6 #when NW are occupied go E and toggle state 6
+
+
+
+
+7 xxxx -> S 7 # when in state 7 and all cells are unoccupied go S and toggle state 7
+
+
+
+
+0 NExx -> S 0 #when NE are occupied and bot is in state 0 go S and toggle state 0
+
+
+
+
+7 xEWS -> N 2 #if EWS are occupied go N and toggle state 2
+
+
+
+
+0 NxWx -> S 0 #when NW are occupied but ES aren't go S and toggle state 0
+
+
+
+
+0 NExS -> W 5 #when NES are occupied go W and toggle state 5
+
+
+
+
+0 NEWx -> S 0 #when NEW are occupied go S and toggle state 0
+
+
+
+
+2 xEWS -> N 2 #when EWS are walls go N and toggle state 2
+
+
+
+
+0 NxWS -> E 6 #when NWS are walls go E and toggle state 6
+
+
+7 NxWS -> E 6 #When NWS are walls go E and toggle state 6
